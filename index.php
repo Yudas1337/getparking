@@ -26,7 +26,7 @@ button:hover {
 		</style>
 		<link rel="shortcut icon" href="images/parkir.png">
 	</head>
-	<body background="images/background.jpg">
+	<body background="images/background.jpg" style="background-repeat: no-repeat; background-size: cover">
 		<center><br><br>
 		<table width=70% height=70%>
 			<tr><td bgcolor=#8A0808><br><h1 align=center style="color :white;">GetParking. The Smart Parking System</h1></td>
@@ -37,5 +37,5 @@ button:hover {
 			</tr>
 		</table>
 	</center><br>
-	</body>
+	</body background="images/background.jpg">
 </html>
