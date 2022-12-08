@@ -17,7 +17,9 @@ if(!isset($_SESSION['username'])) {
 <link rel="shortcut icon" href="images/parkir.png">
 </head>
 <body>
-<img src="images/logo.png"/>
+<center>
+    <img src="images/logo.png" style="width: 15%"/>
+</center>
 <ul class="topnav">
 	<?php if($_SESSION['level'] == 'admin'){ ?>
   <li><a href="home.php">Beranda</a></li>

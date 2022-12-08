@@ -34,7 +34,11 @@ input[type=submit]:hover {
 </head>
 <body>
   <div class="login-page">
-    <center><a href="index.php"><img src="images/login.png"/ width="45%" height="25%"></a></center>
+    <center><a href="index.php">
+            <center>
+                <img src="images/logo_3.png" style="width: 100%; margin-bottom: 5px"/>
+            </center>
+        </a></center>
     <div class="form">
       <form class="login-form" action = "cek_login.php" method="POST">
         <input type="text" name="username" placeholder="username"/>
