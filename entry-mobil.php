@@ -1,7 +1,6 @@
 <?php
 include "koneksi.php";
-if(empty($_SESSION))
-   session_start();
+session_start();
 
 if(!isset($_SESSION['username'])) {
    header("Location: login.php");
@@ -29,10 +28,10 @@ if(!isset($_SESSION['username'])) {
   		<a href="log-aktifitas.php">Laporan Aktifitas</a>
   	</div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
     <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Parkir</a>
@@ -78,10 +77,10 @@ if(!isset($_SESSION['username'])) {
       <a href="log-parkir.php">Laporan Parkir</a>
           </div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
     <li class="right"><a href="logout.php">Logout</a></li>
@@ -93,11 +92,11 @@ if(!isset($_SESSION['username'])) {
     <label for="plat_nomor">Nomor Plat</label>
     <input type="text" id="plat_nomor" name="plat_nomor" placeholder="Nomor Plat">
 
-	<label for="jenis">Jenis Mobil</label>
-    <input type="text" id="jenis" name="jenis" placeholder="Jenis Mobil">
+	<label for="jenis">Jenis Kendaraan</label>
+    <input type="text" id="jenis" name="jenis" placeholder="Jenis Kendaraan">
 
 	<label for="waktu_masuk">Waktu Masuk Parkir</label>
-    <input type="text" id="waktu_masuk" name="waktu_masuk" placeholder="Waktu Masuk Parkir" value="<?php $tgl=date('Y-m-d h:i:s'); echo $tgl;?>">
+    <input readonly type="text" id="waktu_masuk" name="waktu_masuk" placeholder="Waktu Masuk Parkir" value="<?php $tgl=date('Y-m-d h:i:s'); echo $tgl;?>">
 
     <input type="hidden" id="bulan" name="bulan" value="<?php $bulan=date('m-Y'); echo $bulan;?>">
 

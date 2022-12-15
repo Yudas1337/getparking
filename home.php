@@ -1,7 +1,6 @@
 <?php
+session_start();
 include "koneksi.php";
-if(empty($_SESSION))
-   session_start();
 
 if(!isset($_SESSION['username'])) {
    header("Location: login.php");
@@ -49,10 +48,10 @@ th {
   		<a href="log-aktifitas.php">Laporan Aktifitas</a>
   	</div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
     <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Parkir</a>
@@ -98,10 +97,10 @@ th {
       <a href="log-parkir.php">Laporan Parkir</a>
           </div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
 

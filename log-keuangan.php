@@ -49,10 +49,10 @@ th {
   		<a href="log-aktifitas.php">Laporan Aktifitas</a>
   	</div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
     <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Parkir</a>
@@ -98,10 +98,10 @@ th {
       <a href="log-parkir.php">Laporan Parkir</a>
           </div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
 
@@ -140,7 +140,7 @@ th {
     $mobilku = $mobilku +1;
     }
     ?>
-    <tr><th colspan="3"><center>Total Mobil : <?php echo $mobilku; ?> Total Pendapatan : <?php echo $total; ?></center></th>
+    <tr><th colspan="3"><center>Total Kendaraan : <?php echo $mobilku; ?> Total Pendapatan : <?php echo $total; ?></center></th>
     </tr>
   </table>
 

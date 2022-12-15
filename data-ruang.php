@@ -1,9 +1,6 @@
 <?php
 include "koneksi.php";
 
-if(empty($_SESSION))
-   session_start();
-
 if(!isset($_SESSION['username'])) {
    header("Location: login.php");
    exit;
@@ -53,8 +50,8 @@ if(!isset($_SESSION['username'])) {
 			</div>
 			<div class="dropdown-content">
 				<?php
-					if($_SESSION['level'] == "admin") echo '<a class="w3-bar-item w3-button"  href="entry-mobil.php">Entry Mobil Masuk</a>';
-					else if($_SESSION['level'] == "kp") echo '<a class="w3-bar-item w3-button"  href="entry-mobil.php">Entry Mobil Masuk</a>';
+					if($_SESSION['level'] == "admin") echo '<a class="w3-bar-item w3-button"  href="entry-mobil.php">Entry Kendaraan Masuk</a>';
+					else if($_SESSION['level'] == "kp") echo '<a class="w3-bar-item w3-button"  href="entry-mobil.php">Entry Kendaraan Masuk</a>';
 				?>
 			</div>
 			<div class="dropdown-content">
@@ -77,8 +74,8 @@ if(!isset($_SESSION['username'])) {
 			</div>
 			<div class="dropdown-content">
 				<?php
-					if($_SESSION['level'] == "admin") echo '<a class="w3-bar-item w3-button"  href="mobilaktif.php">Data Mobil Aktif</a>';
-					else if($_SESSION['level'] == "kel") echo '<a class="w3-bar-item w3-button"  href="mobilaktif.php">Data Mobil Aktif</a>';
+					if($_SESSION['level'] == "admin") echo '<a class="w3-bar-item w3-button"  href="mobilaktif.php">Data Kendaraan Aktif</a>';
+					else if($_SESSION['level'] == "kel") echo '<a class="w3-bar-item w3-button"  href="mobilaktif.php">Data Kendaraan Aktif</a>';
 				?>
 			</div>
 			<div class="dropdown-content">

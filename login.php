@@ -1,7 +1,6 @@
 <?php
+session_start();
 include 'koneksi.php';
-if(empty($_SESSION))
-   session_start();
 if(isset($_SESSION['username'])) {
    header("location: home.php");
    exit;

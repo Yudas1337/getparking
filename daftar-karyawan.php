@@ -1,8 +1,6 @@
 <?php
 include "koneksi.php";
-
-if(empty($_SESSION))
-   session_start();
+session_start();
 
 if(!isset($_SESSION['username'])) {
    header("Location: login.php");
@@ -49,10 +47,10 @@ th {
   		<a href="log-aktifitas.php">Laporan Aktifitas</a>
   	</div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
     <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Parkir</a>
@@ -98,10 +96,10 @@ th {
       <a href="log-parkir.php">Laporan Parkir</a>
           </div>
   </li>
-  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Mobil</a>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Kendaraan</a>
       <div class="dropdown-content">
-        <a href="entry-mobil.php">Entry Mobil Masuk</a>
-        <a href="mobilaktif.php">Data Mobil Aktif</a>
+        <a href="entry-mobil.php">Entry Kendaraan Masuk</a>
+        <a href="mobilaktif.php">Data Kendaraan Aktif</a>
       </div>
   </li>
 
@@ -135,16 +133,8 @@ th {
 			<td><?php echo $data['kelamin']; ?></td>
 			<td><?php echo $data['no_hp']; ?></td>
 			<td><?php echo $data['shift']; ?></td>
-      <?php if ($data['level'] == 'kr'){
-      ?>
-      <td>Karyawan Ruang</td>
-    <?php }elseif ($data['level'] == 'kp1'){
-      ?>
-      <td>Karyawan Parkir Depan</td>
-  <?php }elseif ($data['level'] == 'kp2'){
-    ?>
-    <td>Karyawan Parkir Belakang</td>
-  <?php } ?>
+			<td><?php echo $data['level']; ?></td>
+	
 			<td>
 				<a href="edit-karyawan.php?id=<?php echo $data['id']; ?>"><img src="images/edit.png" height=7% width=7%></a> |
 				<a href="hapus-karyawan.php?id=<?php echo $data['id']; ?>"><img src="images/delete.png" height=7% width=7%></a>
